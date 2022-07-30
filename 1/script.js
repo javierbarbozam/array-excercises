@@ -11,9 +11,9 @@ while (true) {
 	}
 }
 
-let doubles = list.map (multiply)
-function multiply (num){
-	return num * 2
+let total = list.reduce (myfunction)
+function myfunction (a,b){
+	return a+b
 }
 
-document.write("Los números ingreados fueron "+list+" y su multiplicación por sí mismos sería " + doubles)
+document.write("Los números ingreados fueron "+list+" y su multiplicación por sí mismos sería " + total)
