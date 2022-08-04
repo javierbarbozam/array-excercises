@@ -1,19 +1,13 @@
-let list = []
+let values = prompt ("Digite números separados por una coma. Ejemplo: 2, 3, 4, 5")
+let listA = values.split(', ')
+let listB = []
 
-while (true) {
-	var item = Number (prompt("Digite un número. Ejemplo: 20"));
+let first_i = listA.shift() // takes the first item from the original array
+let second_i = listA.pop() // takes the last item from the original array
 
-	list.push(item)
 
-	var finish = prompt ("¿Desea ingresar otro dígito? Digite si o no");
-	if (finish === "si") {
-		break;
-	}
-}
+listA.push(first_i) // Adds first_i at the end of the array
+listA.unshift(second_i) // Adds second_i at the begginning of the array
 
-let total = list.reduce (myfunction)
-function myfunction (a,b){
-	return a+b
-}
+console.log (listA)
 
-document.write("Los números ingreados fueron "+list+" y su multiplicación por sí mismos sería " + total)
